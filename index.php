@@ -27,7 +27,7 @@
 						<h2 class="white">£4.00 <a href="" class="btn btn-light btn-lg">Buy now</a></h2>
 					</div>
 					<div class="col-md-4">
-						<h4>All pre-orders come with a signed Jamescape TV postcard!</h4>
+						<h4 class="white">All pre-orders come with a signed Jamescape TV postcard!</h4>
 					</div>
 				</div>
 			</div>
