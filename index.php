@@ -56,6 +56,7 @@
 							<div class="product">
 								<img src="https://grumio.uk' . $entry->images[0]->path . '" />
 								<h5 class="black">' . $entry->name . '</h5>
+								<p class="lead">' . $entry->price . '</p>
 								<a href="' . $entry->purchaseUrl . '" class="btn btn-primary">Buy now</a><a href="product?id=' . $entry->_id . '" class="btn btn-light">More info</a>
 							</div>
 						</div>
