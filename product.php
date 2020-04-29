@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<section class="header">
-			<a href="#">
+			<a href="index.php">
 				<div class="container">
 					<h1 class="display-5"><span class="regular">Jamescape</span> <span class="light">Store</span></h1>
 				</div>
@@ -34,39 +34,33 @@
 				</div>
 			</div>
 		</section>
-		<section class="products">
+		<section class="main">
 			<div class="container">
-				<h2>What's Hot</h2>
-				<p>We're still selling all of our other merchandise items as normal through the our distribution partners, TShirt Studio! See what we've got on offer below...</p>
+				<?php
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, "https://grumio.uk/cockpit/api/collections/get/merchandiseItem");
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array("populate" => 1, "filter" => array("_id" => $_GET['id']))));
+				curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
+				$result = curl_exec($ch);
+				curl_close($ch);
+
+				$data = json_decode($result);
+
+				$entry = $data->entries[0];
+				?>
 				<div class="row">
-					<?php
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_URL, "https://grumio.uk/cockpit/api/collections/get/merchandiseItem");
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-					curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array("populate" => 1)));
-					curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
-					$result = curl_exec($ch);
-					curl_close($ch);
-
-					$data = json_decode($result);
-
-					foreach($data->entries as $entry)
-					{
-						echo
-						'
-						<div class="col-md-4 col-lg-3">
-							<div class="product">
-								<img src="https://grumio.uk' . $entry->images[0]->path . '" />
-								<h5 class="black">' . $entry->name . '</h5>
-								<p class="lead">' . $entry->price . '</p>
-								<div class="buyInfoButtons">
-									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary">Buy now</a><a href="product.php?id=' . $entry->_id . '" class="btn btn-light">More info</a>
-								</div>
-							</div>
+					<div class="col-md-4">
+						<img class="productImage" src="https://grumio.uk<?php echo $entry->images[0]->path ?>" />
+					</div>
+					<div class="col-md-8">
+						<h2><?php echo $entry->name; ?></h2>
+						<p class="lead"><?php echo $entry->price; ?></p>
+						<p><?php echo $entry->description; ?></p>
+						<div class="buyInfoButtons">
+							<a href="<?php echo $entry->purchaseUrl ?>" class="btn btn-lg btn-primary">Buy now</a>
 						</div>
-						';
-					};
-					?>
+					</div>
 				</div>
 			</div>
 		</section>

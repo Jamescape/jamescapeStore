@@ -44,7 +44,7 @@ section
 .product
 {
 	background: rgb(230, 230, 230);
-	padding: 20px;
+	padding: 30px;
 	margin: 0 0 15px 0;
 }
 
@@ -61,12 +61,12 @@ section
 
 @media (max-width: 1200px)
 {
-	.product > a
+	.buyInfoButtons > a
 	{
 		display: block;
 	}
 
-	.product > a:not(:last-child)
+	.buyInfoButtons > a:not(:last-child)
 	{
 		margin-bottom: 5px;
 	}
@@ -74,8 +74,18 @@ section
 
 @media (min-width: 1201px)
 {
-	.product > a:not(:last-child)
+	.buyInfoButtons > a:not(:last-child)
 	{
 		margin-right: 5px;
 	}
+}
+
+.productImage
+{
+	width: 100%;
+}
+
+.header > a,.header > a:hover
+{
+	text-decoration: none;
 }
