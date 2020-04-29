@@ -35,3 +35,47 @@ section
 {
 	font-weight: 300;
 }
+
+.black
+{
+	color: rgb(0, 0, 0);
+}
+
+.product
+{
+	background: rgb(230, 230, 230);
+	padding: 20px;
+	margin: 0 0 15px 0;
+}
+
+.product > img
+{
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+
+.footer
+{
+	text-align: center;
+}
+
+@media (max-width: 1200px)
+{
+	.product > a
+	{
+		display: block;
+	}
+
+	.product > a:not(:last-child)
+	{
+		margin-bottom: 5px;
+	}
+}
+
+@media (min-width: 1201px)
+{
+	.product > a:not(:last-child)
+	{
+		margin-right: 5px;
+	}
+}
