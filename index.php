@@ -54,13 +54,13 @@
 					{
 						echo
 						'
-						<div class="col-md-4 col-lg-3">
+						<div class="col-md-4 col-xl-3">
 							<div class="product">
 								<img src="https://grumio.uk' . $entry->images[0]->path . '" />
 								<h5 class="black">' . $entry->name . '</h5>
 								<p class="lead">' . $entry->price . '</p>
 								<div class="buyInfoButtons">
-									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary">Buy now</a><a href="product.php?id=' . $entry->_id . '" class="btn btn-light">More info</a>
+									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary" target="_blank">Buy now</a><a href="product.php?id=' . $entry->_id . '" class="btn btn-light">More info</a>
 								</div>
 							</div>
 						</div>

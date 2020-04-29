@@ -47,21 +47,38 @@
 
 				$data = json_decode($result);
 
-				$entry = $data->entries[0];
-				?>
-				<div class="row">
-					<div class="col-md-4">
-						<img class="productImage" src="https://grumio.uk<?php echo $entry->images[0]->path ?>" />
-					</div>
-					<div class="col-md-8">
-						<h2><?php echo $entry->name; ?></h2>
-						<p class="lead"><?php echo $entry->price; ?></p>
-						<p><?php echo $entry->description; ?></p>
-						<div class="buyInfoButtons">
-							<a href="<?php echo $entry->purchaseUrl ?>" class="btn btn-lg btn-primary">Buy now</a>
+				if ($data->total > 0)
+				{
+					$entry = $data->entries[0];
+
+					echo
+					'
+					<div class="row">
+						<div class="col-md-4">
+							<img class="productImage" src="https://grumio.uk' . $entry->images[0]->path . '" />
+						</div>
+						<div class="col-md-8">
+							<h2>' . $entry->name . '</h2>
+							<p class="lead">' . $entry->price . '</p>
+							<p>' . $entry->description . '</p>
+							<div class="buyInfoButtons">
+								<a href="' . $entry->purchaseUrl . '" target="_blank" class="btn btn-lg btn-primary">Buy now</a>
+								<a href="index.php" class="btn btn-lg btn-dark">Go back</a>
+							</div>
 						</div>
 					</div>
-				</div>
+					';
+				}
+				else
+				{
+					echo
+					'
+					<h2>Product not found</h2>
+					<p>Unfortunely we could not find the product you asked us to look for. This could be because the product is not being sold any more or due to an error in the link.</p>
+					';
+				}
+				?>
+				
 			</div>
 		</section>
 		<section class="footer">
