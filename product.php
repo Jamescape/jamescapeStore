@@ -47,6 +47,15 @@
 
 				$data = json_decode($result);
 
+				if (isset($_GET['ret']))
+				{
+					$returnLink = 'http://' . urldecode($_GET['ret']);
+				}
+				else
+				{
+					$returnlink = 'index.php';
+				}
+
 				if ($data->total > 0)
 				{
 					$entry = $data->entries[0];
@@ -64,7 +73,7 @@
 							<p>' . $entry->description . '</p>
 							<div class="buyInfoButtons">
 								<a href="' . $entry->purchaseUrl . '" target="_blank" class="btn btn-lg btn-primary">Buy now</a>
-								<a href="index.php" class="btn btn-lg btn-dark">Go back</a>
+								<a href="'. $returnLink . '" class="btn btn-lg btn-dark">Go back</a>
 							</div>
 						</div>
 					</div>

@@ -60,7 +60,7 @@
 								<h5 class="black">' . $entry->name . '</h5>
 								<p class="lead">' . $entry->price . '</p>
 								<div class="buyInfoButtons">
-									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary" target="_blank">Buy now</a><a href="product.php?id=' . $entry->_id . '" class="btn btn-light">More info</a>
+									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary" target="_blank">Buy now</a><a href="product.php?id=' . $entry->_id . '&ret=' . urlencode($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . '" class="btn btn-light">More info</a>
 								</div>
 							</div>
 						</div>
