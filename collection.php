@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<section class="header">
-			<a href="index.php">
+			<a href="#">
 				<div class="container">
 					<h1 class="display-5"><span class="regular">Jamescape</span> <span class="light">Store</span></h1>
 				</div>
@@ -34,13 +34,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="main">
+		<section class="products">
 			<div class="container">
 				<?php
 				$ch = curl_init();
 				curl_setopt($ch, CURLOPT_URL, "https://grumio.uk/cockpit/api/collections/get/merchandiseItem");
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array("populate" => 1, "filter" => array("_id" => $_GET['id']))));
+				curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array("populate" => 1, "filter" => array("collection._id" => $_GET['id']))));
 				curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
 				$result = curl_exec($ch);
 				curl_close($ch);
@@ -49,26 +49,26 @@
 
 				if ($data->total > 0)
 				{
-					$entry = $data->entries[0];
+					echo '<h2>' . $data->entries[0]->collection->name . '</h2>';
 
-					echo
-					'
-					<div class="row">
-						<div class="col-md-4">
-							<img class="productImage" src="https://grumio.uk' . $entry->images[0]->path . '" />
-						</div>
-						<div class="col-md-8">
-							<h2>' . $entry->name . '</h2>
-							<p><a href="collection.php?id=' . $entry->collection->_id . '">' . $entry->collection->name . '</a></p>
-							<p class="lead">' . $entry->price . '</p>
-							<p>' . $entry->description . '</p>
-							<div class="buyInfoButtons">
-								<a href="' . $entry->purchaseUrl . '" target="_blank" class="btn btn-lg btn-primary">Buy now</a>
-								<a href="index.php" class="btn btn-lg btn-dark">Go back</a>
+					foreach($data->entries as $entry)
+					{
+						echo
+						'
+						<div class="row">
+							<div class="col-md-4 col-xl-3">
+								<div class="product">
+									<img src="https://grumio.uk' . $entry->images[0]->path . '" />
+									<h5 class="black">' . $entry->name . '</h5>
+									<p class="lead">' . $entry->price . '</p>
+									<div class="buyInfoButtons">
+										<a href="' . $entry->purchaseUrl . '" class="btn btn-primary" target="_blank">Buy now</a><a href="product.php?id=' . $entry->_id . '" class="btn btn-light">More info</a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					';
+						';
+					};
 				}
 				else
 				{
@@ -79,6 +79,7 @@
 					';
 				}
 				?>
+				<a class="btn btn-lg btn-dark" href="index.php">Go home</a>
 			</div>
 		</section>
 		<section class="footer">
