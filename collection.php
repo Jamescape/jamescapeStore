@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<section class="header">
-			<a href="#">
+			<a href="index.php">
 				<div class="container">
 					<h1 class="display-5"><span class="regular">Jamescape</span> <span class="light">Store</span></h1>
 				</div>
