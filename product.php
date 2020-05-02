@@ -20,16 +20,9 @@
 		</section>
 		<section class="feature">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-						<h2 class="white">Our NHS Appeal</h2>
-						<p class="lead">100% of profits from our latest merchandise line go directly to support the NHS.</p>
-						<a href="index.php" class="btn btn-light btn-lg">Find out more</a>
-					</div>
-					<div class="col-md-4">
-						
-					</div>
-				</div>
+				<h2 class="white">Limited Edition Jamescape TV Does Dartmoor Merch</h2>
+				<p class="lead">Just because the series is over, it doesn't mean the fun is! Get your Dartmoor merch while you still can...</p>
+				<a href="https://store.jamescape.net/collection.php?id=5e5d15a53132630ccc0000e6" class="btn btn-light btn-lg">Show me!</a>
 			</div>
 		</section>
 		<section class="main">

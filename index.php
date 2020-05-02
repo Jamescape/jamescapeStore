@@ -20,18 +20,9 @@
 		</section>
 		<section class="feature">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-						<h2 class="white">NHS Teddy Bears</h2>
-						<p class="lead">100% of profits from our latest merchandise line go directly to support the NHS.</p>
-						<p>These stylish teddy bears adorning the Jamescape TV logo across their t-shirts and an adorable "Supporting our NHS" ribbon are a great way to remember these challenging times for years to come while supporting those who are leading the battle against the virus.</p>
-						<p>This limited edition merchandise line is sold directly by Jamescape and is available to buy individually or in a family pack of 5!</p>
-						<h2 class="white">£4.00 <a href="" class="btn btn-light btn-lg">Pre-order now</a></h2>
-					</div>
-					<div class="col-md-4">
-						<h4 class="white">All pre-orders come with a signed Jamescape TV postcard!</h4>
-					</div>
-				</div>
+				<h2 class="white">Limited Edition Jamescape TV Does Dartmoor Merch</h2>
+				<p class="lead">Just because the series is over, it doesn't mean the fun is! Get your Dartmoor merch while you still can...</p>
+				<a href="https://store.jamescape.net/collection.php?id=5e5d15a53132630ccc0000e6" class="btn btn-light btn-lg">Show me!</a>
 			</div>
 		</section>
 		<section class="products">
