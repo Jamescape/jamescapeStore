@@ -37,9 +37,10 @@ section
 	font-weight: 300;
 }
 
-.black
+.black,.black:hover,.black>a,.black>a:hover
 {
 	color: rgb(0, 0, 0);
+	text-decoration: none;
 }
 
 .product

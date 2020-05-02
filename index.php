@@ -57,7 +57,7 @@
 						<div class="col-md-4 col-xl-3">
 							<div class="product">
 								<img src="https://grumio.uk' . $entry->images[0]->path . '" />
-								<h5 class="black">' . $entry->name . '</h5>
+								<h5 class="black"><a href="product.php?id=' . $entry->_id . '&ret=' . urlencode($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . '">' . $entry->name . '</a></h5>
 								<p class="lead">' . $entry->price . '</p>
 								<div class="buyInfoButtons">
 									<a href="' . $entry->purchaseUrl . '" class="btn btn-primary" target="_blank">Buy now</a><a href="product.php?id=' . $entry->_id . '&ret=' . urlencode($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . '" class="btn btn-light">More info</a>
