@@ -76,6 +76,16 @@
 						</div>
 					</div>
 					';
+
+					if (isset($entry->type->sizingGuide) && $entry->type->sizingGuide != "")
+					{
+						echo
+						'<h3>Sizing Guide</h3>' . $entry->type->sizingGuide;
+					}
+					else
+					{
+						echo 'notfound';
+					}
 				}
 				else
 				{
