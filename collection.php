@@ -50,7 +50,7 @@
 				{
 					echo '<h2>' . $data->entries[0]->collection->name . '</h2><div class="row">';
 
-					foreach($data->entries as $entry)
+					foreach ($data->entries as $entry)
 					{
 					echo
 					'

@@ -49,7 +49,7 @@
 
 					$data = json_decode($result);
 
-					foreach($data->entries as $entry)
+					foreach ($data->entries as $entry)
 					{
 						echo
 						'

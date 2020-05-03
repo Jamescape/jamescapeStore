@@ -112,3 +112,16 @@ section
 {
 	color: white;
 }
+
+.carousel-item
+{
+	padding: 40px;
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon,.carousel-indicators
+{
+	filter: invert(1);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-ms-filter: invert(1);
+}
