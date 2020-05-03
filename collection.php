@@ -15,7 +15,7 @@
 	<body onload="checkAndShowPrompt();">
 		<div id="cookies">
 			<div class="container">
-				<p>We use cookies to make your experience on our website better. Read our <a href="https://jamescape.net/permalink/cookiepolicy" target="_blank">Cookie Policy</a> for more information.</p>
+				<p>We use cookies to make your experience on our website better. Read our <a href="https://jamescape.net/permalink/cookiepolicy.html" target="_blank">Cookie Policy</a> for more information.</p>
 				<button class="btn btn-light" onclick="setAndHidePrompt();">I agree to the use of cookies</button>
 			</div>
 		</div>
