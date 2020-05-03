@@ -9,8 +9,16 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Comfortaa:300,400|Roboto+Condensed:700,700i" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/store.css" />
+
+		<script src="js/cookies.js" type="text/javascript"></script>
 	</head>
-	<body>
+	<body onload="checkAndShowPrompt();">
+		<div id="cookies">
+			<div class="container">
+				<p>We use cookies to make your experience on our website better. Read our <a href="https://jamescape.net/permalink/cookiepolicy" target="_blank">Cookie Policy</a> for more information.</p>
+				<button class="btn btn-light" onclick="setAndHidePrompt();">I agree to the use of cookies</button>
+			</div>
+		</div>	
 		<section class="header">
 			<a href="#">
 				<div class="container">
@@ -28,7 +36,7 @@
 		<section class="products">
 			<div class="container">
 				<h2>What's Hot</h2>
-				<p>We're still selling all of our other merchandise items as normal through the our distribution partners, TShirt Studio! See what we've got on offer below...</p>
+				<p>Check out our best-selling merchandise, fulfilled by our distribution partners at TShirt Studio! See what we've got on offer below...</p>
 				<div class="row">
 					<?php
 					$ch = curl_init();
@@ -59,6 +67,13 @@
 					};
 					?>
 				</div>
+			</div>
+		</section>
+		<section class="feature">
+			<div class="container">
+				<h2 class="white">Make your merch truly yours...</h2>
+				<p class="lead">We offer personalisation on all of our merchandise, get your name (or something else) on your merchandise by getting in touch with our Store support team!</p>
+				<a href="https://barnor.co.uk/support/knowledgebase.php?article=1" target="_blank" class="btn btn-light btn-lg">Find out more</a>
 			</div>
 		</section>
 		<section class="footer">

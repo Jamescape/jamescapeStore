@@ -91,3 +91,24 @@ section
 {
 	text-decoration: none;
 }
+
+#cookies
+{
+	position: fixed;
+	bottom: 0;
+	background: rgb(0, 126, 255);
+	color: rgb(255, 255, 255);
+	z-index: 2;
+	width: 100vw;
+	padding: 15px 0;
+	text-align: center;
+	display: none;
+	opacity: none;
+
+	transition: opacity 0.5s linear;
+}
+
+#cookies > div > p > a,#cookies > div > p > a:hover
+{
+	color: white;
+}
