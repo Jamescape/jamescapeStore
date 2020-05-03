@@ -83,10 +83,6 @@
 						echo
 						'<h3>Sizing Guide</h3>' . $entry->type->sizingGuide;
 					}
-					else
-					{
-						echo 'notfound';
-					}
 				}
 				else
 				{
