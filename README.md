@@ -6,3 +6,5 @@ Quite a specific use case but hopefully some of this will be useful for someone.
 The live site is viewable at [store.jamescape.net](https://store.jamescape.net).
 
 If you want some more information about the Cockpit set up, feel free to submit a [Service Request](https://jamesbarber.tech/help) and I'll see what I can do.
+
+This project is subject to an [MIT License](https://github.com/Jamescape/jamescapeStore/blob/master/LICENSE).
